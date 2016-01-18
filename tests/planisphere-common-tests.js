@@ -1,7 +1,9 @@
-/* global Tinytest, Planisphere, SimpleSchema */
+/* global Tinytest, SimpleSchema */
 
-Tinytest.add('pluginConfig basic', () => {
-  Planisphere.pluginConfig({
+const Planisphere = Package['daishi:planisphere-core'].Planisphere;
+
+Tinytest.add('registerPlugin basic', () => {
+  Planisphere.registerPlugin({
     name: 'foo',
     description: 'bar',
     configMethod: 'foo.config',
@@ -13,9 +15,9 @@ Tinytest.add('pluginConfig basic', () => {
   });
 });
 
-Tinytest.add('pluginConfig missing schema', (test) => {
+Tinytest.add('registerPlugin missing schema', (test) => {
   test.throws(() => {
-    Planisphere.pluginConfig({
+    Planisphere.registerPlugin({
       name: 'foo',
       description: 'bar',
       configMethod: 'foo.config'
@@ -23,9 +25,9 @@ Tinytest.add('pluginConfig missing schema', (test) => {
   }, 'Missing');
 });
 
-Tinytest.add('pluginConfig invalid schema', (test) => {
+Tinytest.add('registerPlugin invalid schema', (test) => {
   test.throws(() => {
-    Planisphere.pluginConfig({
+    Planisphere.registerPlugin({
       name: 'foo',
       description: 'bar',
       configMethod: 'foo.config',
