@@ -26,7 +26,7 @@ Then, open <http://localhost:3000/> in your browser.
 Demo
 ----
 
-<http://planisphere-demo.meteor.com/>
+<https://planisphere-demo.herokuapp.com/>
 
 Note: this demo above is in production mode and there's no editor shown.
 
