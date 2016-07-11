@@ -1,4 +1,5 @@
 /* eslint-env meteor */
+/* eslint prefer-template: 0 */
 
 /* global Planisphere:true, PlanispherePlugins:true */
 /* global PlanisphereConfigs:true, PlanisphereRefreshing:true */
